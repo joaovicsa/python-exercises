@@ -15,11 +15,15 @@ class Account:
         if withdrawAmount <= self.balance:
             self.balance -= withdrawAmount
 
+    def displayAccount(self):
+        print(self.name + " balance: " + str(self.balance))
+
 account1 = Account(name="Jane Green", balance=64.00)
 account2 = Account(name="John Blue", balance=-6.00)
 
-print(account1.name + " balance: " + str(account1.balance))
-print(account2.name + " balance: " + str(account2.balance))
+
+account1.displayAccount()
+account2.displayAccount()
 
 depositAmount = float(input("Enter the amount to be deposited in " + account1.name + " account: "))
 if depositAmount < 0.00:
@@ -38,8 +42,8 @@ else:
     print("Adding " + str(depositAmount) + " to account balance.")
     account2.deposit(depositAmount)
 
-print(account1.name + " balance: " + str(account1.balance))
-print(account2.name + " balance: " + str(account2.balance))
+account1.displayAccount()
+account2.displayAccount()
 
 withdrawAmount = float(input("Enter the amount to be withdrawn in " + account1.name + " account: "))
 if withdrawAmount > account1.balance:
@@ -48,5 +52,5 @@ else:
     account1.withdraw(withdrawAmount)
     print("Removing " + str(withdrawAmount) + " from account balance.")
 
-print(account1.name + " balance: " + str(account1.balance))
-print(account2.name + " balance: " + str(account2.balance))
+account1.displayAccount()
+account2.displayAccount()
