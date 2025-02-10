@@ -47,7 +47,31 @@ for i in range(20):
     name = names[i]
     role = random.choice(roles)
     salary = random.randint(30000, 120000)  # Random salary between 30k and 120k
-    account = Account(name=f"{name}'s Account", balance=random.randint(1000, 20000))
-    employee = Employee(name=name, role=role, account=account, salary=salary)
+    account = Account.Account(name=name, balance=random.randint(1000, 20000))
+    employee = Employee.Employee(name=name, role=role, account=account, salary=salary)
     employee_list.append(employee)
 
+option = Industry.menu()
+
+if option == 1:
+    name = input("Enter the candidate's name: ")
+    role = input("Enter the candidate's role: ")
+    salary = random.randint(30000, 120000)
+    account = Account(name, balance=random.randint(1000, 20000))
+    candidate = Employee(name=name, role=role, account=account, salary=salary)
+    Industry.newEmployee(candidate)
+else:
+    if option == 2:
+        word = input("Enter the Employee name or role: ")
+        Industry.searchEmployee(word, employee_list)
+
+    else:
+        if option == 3:
+            index = int(input("Enter the input ID to be deleted: "))
+            Industry.removeEmployee(index)
+        else:
+            if option == 4:
+                for i in employee_list:
+                    print(employee_list[i])
+            else:
+                print(employee_list.employee.salary.sort())
