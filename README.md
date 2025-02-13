@@ -8,3 +8,6 @@
 
 <p>Create an Employee class whereas the Employee Object can get a payment and add this to it's Account balance.</p>
 
+<h3> Question 3 </h3>
+
+<p>Create an Industry class to manage the Employees. It must be a CRUD.</p>
