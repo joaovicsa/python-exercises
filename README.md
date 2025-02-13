@@ -7,3 +7,4 @@
 <h3> Question 2 </h3>
 
 <p>Create an Employee class whereas the Employee Object can get a payment and add this to it's Account balance.</p>
+
